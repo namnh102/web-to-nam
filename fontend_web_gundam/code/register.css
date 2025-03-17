@@ -1,0 +1,225 @@
+/* Bọc toàn bộ form */
+.Register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px); /* Adjusted to account for header height */
+    background-color: #F5F5F5;
+    padding: 0 20px;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 70px; /* Equal to header height */
+}
+
+/* Hộp chứa form */
+.auth-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Red accent bar at top */
+.auth-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #FF0048; /* Matches your site's red accent color */
+}
+
+/* Tiêu đề đăng ký */
+.auth-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f1f1f;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Input field */
+.auth-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: block;
+}
+
+.auth-box input:focus {
+    border-color: #FF0048;
+    box-shadow: 0 0 0 2px rgba(255, 0, 72, 0.1);
+    outline: none;
+    background-color: #fff;
+}
+
+.auth-box input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* Button */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF0048;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 0, 72, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: #d10038;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 72, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 0, 72, 0.2);
+}
+
+/* Link đăng nhập */
+.switch-auth {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    color: #666;
+}
+
+.switch-auth a {
+    text-decoration: none;
+    color: #FF0048;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.switch-auth a:hover {
+    color: #d10038;
+}
+
+.switch-auth a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FF0048;
+    transition: width 0.3s ease;
+}
+
+.switch-auth a:hover::after {
+    width: 100%;
+}
+
+/* Error message */
+#register-error {
+    color: #FF0048;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: left;
+    font-weight: 500;
+    background-color: rgba(255, 0, 72, 0.08);
+    border-radius: 6px;
+    padding: 8px 10px;
+    display: none;
+}
+
+#register-error:not(:empty) {
+    display: block;
+}
+
+/* Password strength indicator (optional enhancement) */
+.password-strength {
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-weak {
+    background-color: #ff4d4d;
+    width: 25%;
+}
+
+.strength-medium {
+    background-color: #ffa64d;
+    width: 50%;
+}
+
+.strength-good {
+    background-color: #ffcc00;
+    width: 75%;
+}
+
+.strength-strong {
+    background-color: #4CAF50;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .auth-box {
+        padding: 30px 25px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 25px 20px;
+    }
+    
+    .auth-box h2 {
+        font-size: 24px;
+    }
+    
+    .auth-box input,
+    .btn-submit {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .switch-auth {
+        font-size: 14px;
+    }
+}
