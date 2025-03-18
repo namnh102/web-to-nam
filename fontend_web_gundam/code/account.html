@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Gundam UP&GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+    <script src="main.js"></script>
+    <script src="lo&re.js"></script>
+    <script src="account.js"></script>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+    <script src="order.js"></script>
+    <style>
+        html,body{
+            margin:0px;
+            height:100%;
+            overflow-x: hidden;
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+<div class ="header">
+    <div class="title t1">
+        <a href="allproduct.html">New & Featured</a>
+        <div class="menu-dropdown featured-dropdown">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="mohinh1.jpg" alt="Pre-orders">
+                    <p>Pre-orders</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh2.jpg" alt="Exclusives">
+                    <p>Exclusives</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh3.jpg" alt="Special Offers">
+                    <p>Special Offers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh4.jpg" alt="New Releases">
+                    <p>New Releases</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh5.jpg" alt="Best Sellers">
+                    <p>Best Sellers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh6.jpg" alt="Limited Edition">
+                    <p>Limited Edition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SERIES Dropdown -->
+    <div class="title t2">
+        <a href="#">SERIES</a>
+        <div class="menu-dropdown series-dropdown">
+            <div class="series-columns">
+                <!-- Cột 1 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM UNIVERSE</div>
+                    <a href="#" class="dropdown-link">Mobile Suit Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam SEED</a>
+                    <a href="#" class="dropdown-link">Gundam Wing</a>
+                    <a href="#" class="dropdown-link">Gundam 00</a>
+                    <a href="#" class="dropdown-link">Iron-Blooded Orphans</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM TIMELINE</div>
+                    <a href="#" class="dropdown-link">Universal Century</a>
+                    <a href="#" class="dropdown-link">Future Century</a>
+                    <a href="#" class="dropdown-link">After Colony</a>
+                    <a href="#" class="dropdown-link">Post Disaster</a>
+                    <a href="#" class="dropdown-link">Cosmic Era</a>
+                </div>
+                
+                <!-- Cột 3 -->
+                <div class="series-col">
+                    <div class="series-header">FEATURED SERIES</div>
+                    <a href="#" class="dropdown-link">Witch from Mercury</a>
+                    <a href="#" class="dropdown-link">Gundam Build Series</a>
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">G Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam Unicorn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MEGA Dropdown -->
+    <div class="title t3">
+        <a href="#">MEGA</a>
+        <div class="menu-dropdown mega-dropdown">
+            <a href="#" class="dropdown-link">MEGA Size (1/48)</a>
+            <a href="#" class="dropdown-link">MEGA Collection</a>
+            <a href="#" class="dropdown-link">MEGA Limited Edition</a>
+            <a href="#" class="dropdown-link">MEGA Perfect Grade</a>
+            <a href="#" class="dropdown-link">MEGA Accessories</a>
+        </div>
+    </div>
+    
+    <!-- TYPE Dropdown -->
+    <div class="title t4">
+        <a href="#">TYPE</a>
+        <div class="menu-dropdown type-dropdown">
+            <div class="type-columns">
+                <!-- Cột 1 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">Perfect Grade (PG)</a>
+                    <a href="#" class="dropdown-link">Master Grade (MG)</a>
+                    <a href="#" class="dropdown-link">Real Grade (RG)</a>
+                    <a href="#" class="dropdown-link">High Grade (HG)</a>
+                    <a href="#" class="dropdown-link">Entry Grade (EG)</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">Action Figures</a>
+                    <a href="#" class="dropdown-link">Gunpla Accessories</a>
+                    <a href="#" class="dropdown-link">Tools & Paints</a>
+                    <a href="#" class="dropdown-link">Display Cases</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imglogo-home"><a href="index.html"><img src="logo.png" alt="anhlogoanhlogo"></a></div>
+    <div class="search-container">
+        <input type="text" placeholder="search">
+        <button><img src="search-regular-24.png" alt=""></button>
+    </div>
+    <div id="auth-container">
+        <div class="login si"><a href="login.html" id="sign-in-link">Sign in /</a></div>
+        <div class="login re"><a href="register.html" id="register-link">Register</a></div>
+    </div>
+    <div id="user-account" style="display: none;">
+        <a href="account.html">
+            <img src="user.jpg" alt="User Icon">
+            <span>My Account</span>
+        </a>
+    </div>
+    <div class="support"><a href="#"><img src="image2.png" alt="logo-phone"></a></div>
+    <div class="address-store"><a href="#"><img src="image3.png" alt="logo-address-store"></a></div>
+    <div class="cart-icon">
+      <a href="cart.html">
+          <img src="cart.png" alt="Giỏ hàng">
+          <span id="cart-count">0</span>
+      </a>
+  </div>
+</div>
+<div class="account-page">
+    <!-- Sidebar -->
+    <div class="account-sidebar">
+        <div class="profile-info">
+            <img src="user.jpg" alt="User">
+            <p class="username">My Account</p>
+            <p class="member-status">UP&GO MEMBER</p>
+            <a href="#" class="logout">Sign out</a>
+        </div>
+
+        <div class="edit-profile">
+            <h3>Edit Profile</h3>
+            <label>Name</label>
+            <input type="text" id="name" value="">
+
+            <label>Phone</label>
+            <input type="text" id="phone" value="">
+
+            <label>Email</label>
+            <input type="email" id="email" value="">
+
+            <button id="save-btn">Save</button>
+        </div>
+
+        <div class="account-menu">
+            <a href="#" id="my-orders" class="menu-item active">
+                <span>My Orders</span>
+            </a>
+            <p class="sub-text">Manage your order</p>
+
+            <a href="#" id="address-default" class="menu-item">
+                <span>Address Default</span>
+            </a>
+            <p class="sub-text">Manage your order address</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="account-content">
+        <div id="orders-section">
+            <h2>My Orders</h2>
+            <div class="orders-empty">
+                <img src="logo-myorder.jpg" alt="No orders">
+                <p>Bạn chưa có đơn hàng nào.</p>
+            </div class="orders-save">
+            <!-- Đơn hàng sẽ được thêm vào đây -->
+        </div>
+        
+        <!-- Address Default Section -->
+        <div id="address-section" style="display: none;">
+            <h2>Address Default</h2>
+            <div class="address-form">
+                <label>First Name</label>
+                <input type="text" id="first-name" placeholder="* First Name">
+
+                <label>Phone</label>
+                <input type="text" id="address-phone" placeholder="* Phone">
+
+                <label>Address</label>
+                <input type="text" id="address" placeholder="* Address">
+
+                <label>City/Ward/Town/Village</label>
+                <input type="text" id="city" placeholder="* City/ward/town/village">
+
+                <button id="edit-btn">Edit</button>
+                <button id="save-address-btn">Edit and Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="column f1">
+        <div class="logo">
+            <img src="logo.png" alt="UP & GO">
+        </div>
+        <div class="contact-info">
+            Giới thiệu về UP & GO <br>
+            Học Viện Bưu Chính Viễn Thông <br>
+            ☎ 0123456789 <br>
+            Đăng ký kinh doanh: 123456789
+        </div>
+    </div>
+    <div class="column f2">
+        <h3>CHÍNH SÁCH</h3>
+        <ul>
+            <li><a href="#">Chính sách đổi trả & hoàn tiền</a></li>
+            <li><a href="#">Điều khoản người dùng</a></li>
+            <li><a href="#">Chính sách giao hàng và kiểm hàng</a></li>
+            <li><a href="#">Chính sách mua hàng & thanh toán</a></li>
+        </ul>
+    </div>
+    <div class="column f3">
+        <h3>HƯỚNG DẪN</h3>
+        <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Hướng dẫn thanh toán</a></li>
+        </ul>
+        <h3>TỔNG ĐÀI HỖ TRỢ</h3>
+        <p class="hotline">HOTLINE: 0123456789 (9h-22h)</p>
+    </div>
+</footer>
+</html>

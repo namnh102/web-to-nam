@@ -1,0 +1,121 @@
+/* Responsive Styles for Admin Panel */
+
+@media (max-width: 1200px) {
+    .charts-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .order-details-grid, .order-summary-section {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .toggle-sidebar {
+      display: flex;
+    }
+    
+    .admin-sidebar {
+      transform: translateX(-100%);
+      width: 280px;
+    }
+    
+    .admin-sidebar.mobile-visible {
+      transform: translateX(0);
+    }
+    
+    .admin-content {
+      margin-left: 0;
+    }
+    
+    .admin-content.expanded {
+      margin-left: 0;
+    }
+    
+    .stats-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .admin-header {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .search-container {
+      order: 3;
+      width: 100%;
+    }
+    
+    .stats-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .data-table {
+      min-width: 700px;
+    }
+    
+    .filters-container {
+      flex-direction: column;
+    }
+    
+    .search-filter {
+      width: 100%;
+    }
+    
+    .search-filter input {
+      width: 100%;
+    }
+    
+    .section-header-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .section-header-actions .add-btn,
+    .section-header-actions .order-actions {
+      width: 100%;
+    }
+    
+    .order-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+    
+    .modal-content {
+      width: 95%;
+      margin: 20px auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .admin-header {
+      padding: 10px 0;
+    }
+    
+    .header-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .pagination {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .form-actions button {
+      width: 100%;
+    }
+  }

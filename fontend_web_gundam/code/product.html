@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Gundam UP&GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script src="lo&re.js"></script>
+    <script src="order.js"></script>
+    <style>
+        html,body{
+            margin:0px;
+            height:100%;
+            overflow-x: hidden;
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+<div id="cart-toast">
+    <div class="toast-content">
+        <img src="cart.png" alt="Cart">
+        <span>Sản phẩm đã được thêm vào giỏ hàng!</span>
+    </div>
+</div>
+<div class ="header">
+    <div class="title t1">
+        <a href="allproduct.html">New & Featured</a>
+        <div class="menu-dropdown featured-dropdown">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="mohinh1.jpg" alt="Pre-orders">
+                    <p>Pre-orders</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh2.jpg" alt="Exclusives">
+                    <p>Exclusives</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh3.jpg" alt="Special Offers">
+                    <p>Special Offers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh4.jpg" alt="New Releases">
+                    <p>New Releases</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh5.jpg" alt="Best Sellers">
+                    <p>Best Sellers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh6.jpg" alt="Limited Edition">
+                    <p>Limited Edition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SERIES Dropdown -->
+    <div class="title t2">
+        <a href="#">SERIES</a>
+        <div class="menu-dropdown series-dropdown">
+            <div class="series-columns">
+                <!-- Cột 1 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM UNIVERSE</div>
+                    <a href="#" class="dropdown-link">Mobile Suit Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam SEED</a>
+                    <a href="#" class="dropdown-link">Gundam Wing</a>
+                    <a href="#" class="dropdown-link">Gundam 00</a>
+                    <a href="#" class="dropdown-link">Iron-Blooded Orphans</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM TIMELINE</div>
+                    <a href="#" class="dropdown-link">Universal Century</a>
+                    <a href="#" class="dropdown-link">Future Century</a>
+                    <a href="#" class="dropdown-link">After Colony</a>
+                    <a href="#" class="dropdown-link">Post Disaster</a>
+                    <a href="#" class="dropdown-link">Cosmic Era</a>
+                </div>
+                
+                <!-- Cột 3 -->
+                <div class="series-col">
+                    <div class="series-header">FEATURED SERIES</div>
+                    <a href="#" class="dropdown-link">Witch from Mercury</a>
+                    <a href="#" class="dropdown-link">Gundam Build Series</a>
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">G Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam Unicorn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MEGA Dropdown -->
+    <div class="title t3">
+        <a href="#">MEGA</a>
+        <div class="menu-dropdown mega-dropdown">
+            <a href="#" class="dropdown-link">MEGA Size (1/48)</a>
+            <a href="#" class="dropdown-link">MEGA Collection</a>
+            <a href="#" class="dropdown-link">MEGA Limited Edition</a>
+            <a href="#" class="dropdown-link">MEGA Perfect Grade</a>
+            <a href="#" class="dropdown-link">MEGA Accessories</a>
+        </div>
+    </div>
+    
+    <!-- TYPE Dropdown -->
+    <div class="title t4">
+        <a href="#">TYPE</a>
+        <div class="menu-dropdown type-dropdown">
+            <div class="type-columns">
+                <!-- Cột 1 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">Perfect Grade (PG)</a>
+                    <a href="#" class="dropdown-link">Master Grade (MG)</a>
+                    <a href="#" class="dropdown-link">Real Grade (RG)</a>
+                    <a href="#" class="dropdown-link">High Grade (HG)</a>
+                    <a href="#" class="dropdown-link">Entry Grade (EG)</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">Action Figures</a>
+                    <a href="#" class="dropdown-link">Gunpla Accessories</a>
+                    <a href="#" class="dropdown-link">Tools & Paints</a>
+                    <a href="#" class="dropdown-link">Display Cases</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imglogo-home"><a href="index.html"><img src="logo.png" alt="anhlogoanhlogo"></a></div>
+    <div class="search-container">
+        <input type="text" placeholder="search">
+        <button><img src="search-regular-24.png" alt=""></button>
+    </div>
+    <div id="auth-container">
+        <div class="login si"><a href="login.html" id="sign-in-link">Sign in /</a></div>
+        <div class="login re"><a href="register.html" id="register-link">Register</a></div>
+    </div>
+    <div id="user-account" style="display: none;">
+        <a href="account.html">
+            <img src="user.jpg" alt="User Icon">
+            <span>My Account</span>
+        </a>
+    </div>
+    <div class="support"><a href="#"><img src="image2.png" alt="logo-phone"></a></div>
+    <div class="address-store"><a href="#"><img src="image3.png" alt="logo-address-store"></a></div>
+    <div class="cart-icon">
+        <a href="cart.html">
+            <img src="cart.png" alt="Giỏ hàng">
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+</div>
+<div class="product-container">
+    <div class="product-images">
+        <div class="thumbnail-container">
+            <button id="prev-btn">▲</button>
+            <div class="thumbnail-list">
+                <img src="mohinh1.jpg" onclick="changeImage(this)">
+                <img src="mohinh2.jpg" onclick="changeImage(this)">
+                <img src="mohinh3.jpg" onclick="changeImage(this)">
+                <img src="mohinh4.jpg" onclick="changeImage(this)">
+            </div>
+            <button id="next-btn">▼</button>
+        </div>
+        <img id="main-image" src="mohinh1.jpg" alt="Main Product">
+    </div>
+    <div class="product-info">
+        <h1>MG 1/100 GUNDAM ASTRAEA + PROTO GN</h1>
+        <p class="price">3,000,000₫</p>
+
+        <div class="quantity">
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+
+        <div class="buttons">
+            <button class="add-to-cart">ADD TO CART</button>
+            <button class="buy-now">BUY NOW</button>
+        </div>
+
+        <hr>
+
+        <div class="details">
+            <p><strong>Brand:</strong> GUN DAM</p>
+            <p><strong>Size:</strong> Height about 40~50cm</p>
+            <p><strong>Material:</strong> PVC/ABS/PC</p>
+        </div>
+    </div>
+</div>
+<section class="suggested-products">
+    <h2>YOU MAY ALSO LIKE</h2>
+    <div class="slider-container">
+        <button class="slider-btn btn-left">&#10094;</button>
+        <div class="slider-wrapper">
+            <div class="slider-item">
+                <img src="mohinh1.jpg" alt="Product 1">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM A</p>
+                    <p class="item-cost">3,600,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh2.jpg" alt="Product 2">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM B</p>
+                    <p class="item-cost">3,800,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh3.jpg" alt="Product 3">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM C</p>
+                    <p class="item-cost">4,000,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh4.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh5.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh6.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="mohinh7.jpg" alt="Product 4">
+                <div class="item-details">
+                    <p class="item-title">MG GUNDAM D</p>
+                    <p class="item-cost">4,200,000₫</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn btn-right">&#10095;</button>
+    </div>
+</section>
+<footer class="footer">
+    <div class="column f1">
+        <div class="logo">
+            <img src="logo.png" alt="UP & GO">
+        </div>
+        <div class="contact-info">
+            Giới thiệu về UP & GO <br>
+            Học Viện Bưu Chính Viễn Thông <br>
+            ☎ 0123456789 <br>
+            Đăng ký kinh doanh: 123456789
+        </div>
+    </div>
+    <div class="column f2">
+        <h3>CHÍNH SÁCH</h3>
+        <ul>
+            <li><a href="#">Chính sách đổi trả & hoàn tiền</a></li>
+            <li><a href="#">Điều khoản người dùng</a></li>
+            <li><a href="#">Chính sách giao hàng và kiểm hàng</a></li>
+            <li><a href="#">Chính sách mua hàng & thanh toán</a></li>
+        </ul>
+    </div>
+    <div class="column f3">
+        <h3>HƯỚNG DẪN</h3>
+        <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Hướng dẫn thanh toán</a></li>
+        </ul>
+        <h3>TỔNG ĐÀI HỖ TRỢ</h3>
+        <p class="hotline">HOTLINE: 0123456789 (9h-22h)</p>
+    </div>
+</footer>
+</html>

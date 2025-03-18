@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Gundam UP&GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="allproduct.css">
+    <script src="main.js"></script>
+    <script src="lo&re.js"></script>
+    <script src="account.js"></script>
+    <script src="cart.js"></script>
+    <script src="product.js"></script>
+    <script src="order.js"></script>
+    <style>
+        html,body{
+            margin:0px;
+            height:100%;
+            overflow-x: hidden;
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+<div class ="header">
+    <div class="title t1">
+        <a href="allproduct.html">New & Featured</a>
+        <div class="menu-dropdown featured-dropdown">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="mohinh1.jpg" alt="Pre-orders">
+                    <p>Pre-orders</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh2.jpg" alt="Exclusives">
+                    <p>Exclusives</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh3.jpg" alt="Special Offers">
+                    <p>Special Offers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh4.jpg" alt="New Releases">
+                    <p>New Releases</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh5.jpg" alt="Best Sellers">
+                    <p>Best Sellers</p>
+                </div>
+                <div class="featured-item">
+                    <img src="mohinh6.jpg" alt="Limited Edition">
+                    <p>Limited Edition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SERIES Dropdown -->
+    <div class="title t2">
+        <a href="#">SERIES</a>
+        <div class="menu-dropdown series-dropdown">
+            <div class="series-columns">
+                <!-- Cột 1 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM UNIVERSE</div>
+                    <a href="#" class="dropdown-link">Mobile Suit Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam SEED</a>
+                    <a href="#" class="dropdown-link">Gundam Wing</a>
+                    <a href="#" class="dropdown-link">Gundam 00</a>
+                    <a href="#" class="dropdown-link">Iron-Blooded Orphans</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="series-col">
+                    <div class="series-header">GUNDAM TIMELINE</div>
+                    <a href="#" class="dropdown-link">Universal Century</a>
+                    <a href="#" class="dropdown-link">Future Century</a>
+                    <a href="#" class="dropdown-link">After Colony</a>
+                    <a href="#" class="dropdown-link">Post Disaster</a>
+                    <a href="#" class="dropdown-link">Cosmic Era</a>
+                </div>
+                
+                <!-- Cột 3 -->
+                <div class="series-col">
+                    <div class="series-header">FEATURED SERIES</div>
+                    <a href="#" class="dropdown-link">Witch from Mercury</a>
+                    <a href="#" class="dropdown-link">Gundam Build Series</a>
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">G Gundam</a>
+                    <a href="#" class="dropdown-link">Gundam Unicorn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MEGA Dropdown -->
+    <div class="title t3">
+        <a href="#">MEGA</a>
+        <div class="menu-dropdown mega-dropdown">
+            <a href="#" class="dropdown-link">MEGA Size (1/48)</a>
+            <a href="#" class="dropdown-link">MEGA Collection</a>
+            <a href="#" class="dropdown-link">MEGA Limited Edition</a>
+            <a href="#" class="dropdown-link">MEGA Perfect Grade</a>
+            <a href="#" class="dropdown-link">MEGA Accessories</a>
+        </div>
+    </div>
+    
+    <!-- TYPE Dropdown -->
+    <div class="title t4">
+        <a href="#">TYPE</a>
+        <div class="menu-dropdown type-dropdown">
+            <div class="type-columns">
+                <!-- Cột 1 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">Perfect Grade (PG)</a>
+                    <a href="#" class="dropdown-link">Master Grade (MG)</a>
+                    <a href="#" class="dropdown-link">Real Grade (RG)</a>
+                    <a href="#" class="dropdown-link">High Grade (HG)</a>
+                    <a href="#" class="dropdown-link">Entry Grade (EG)</a>
+                </div>
+                
+                <!-- Cột 2 -->
+                <div class="type-col">
+                    <a href="#" class="dropdown-link">SD Gundam</a>
+                    <a href="#" class="dropdown-link">Action Figures</a>
+                    <a href="#" class="dropdown-link">Gunpla Accessories</a>
+                    <a href="#" class="dropdown-link">Tools & Paints</a>
+                    <a href="#" class="dropdown-link">Display Cases</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imglogo-home"><a href="index.html"><img src="logo.png" alt="anhlogoanhlogo"></a></div>
+    <div class="search-container">
+        <input type="text" placeholder="search">
+        <button><img src="search-regular-24.png" alt=""></button>
+    </div>
+    <div id="auth-container">
+      <div class="login si"><a href="login.html" id="sign-in-link">Sign in /</a></div>
+      <div class="login re"><a href="register.html" id="register-link">Register</a></div>
+  </div>
+  <div id="user-account" style="display: none;">
+      <a href="account.html">
+          <img src="user.jpg" alt="User Icon">
+          <span>My Account</span>
+      </a>
+  </div>
+    <div class="support"><a href="#"><img src="image2.png" alt="logo-phone"></a></div>
+    <div class="address-store"><a href="#"><img src="image3.png" alt="logo-address-store"></a></div>
+    <div class="cart-icon">
+      <a href="cart.html">
+          <img src="cart.png" alt="Giỏ hàng">
+          <span id="cart-count">0</span>
+      </a>
+  </div>
+</div>
+<div class="main-content">
+    <div class="filter-sidebar">
+        <div class="filter-section">
+            <h3>Price</h3>
+            <div class="filter-option">
+                <input type="checkbox" id="price1">
+                <label for="price1">1,000,000₫-3,000,000₫</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="price2">
+                <label for="price2">3,000,000₫-4,000,000₫</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="price3">
+                <label for="price3">4,000,000₫-5,000,000₫</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="price4">
+                <label for="price4">5,000,000₫-10,000,000₫</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Type</h3>
+            <div class="filter-option">
+                <input type="checkbox" id="type1">
+                <label for="type1">PG</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="type2">
+                <label for="type2">MG</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="type3">
+                <label for="type3">RG</label>
+            </div>
+            <div class="filter-option">
+                <input type="checkbox" id="type4">
+                <label for="type4">HG</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-grid">
+        <div class="product-grid-header">
+            <div class="sort-container">
+                <span>SORT:</span>
+                <select>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                    <option>Price low-high</option>
+                    <option>Price high-low</option>
+                </select>
+            </div>
+            <div class="view-options">
+                <span>12 items total</span>
+                <span>12 items/page</span>
+            </div>
+        </div>
+        
+        <div class="grid-view">
+            <!-- Row 1 -->
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="mohinh7.jpg" alt="Gundam Model">
+                <div class="product-info">
+                    <div class="product-name">MG 1/100 GUNDAM BARBATOS | PARTS-01</div>
+                    <div class="product-price">3,600,000₫</div>
+                </div>
+            </div>
+            
+        <div class="pagination">
+            <div class="page-number active">1</div>
+            <div class="page-number">2</div>
+            <div class="page-number">3</div>
+            <div class="page-number">4</div>
+            <div class="page-number">5</div>
+        </div>
+    </div>
+</div>
+</html>

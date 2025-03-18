@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gundam UP&GO - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="logo.png" alt="Gundam UP&GO">
+            </div>
+            <div class="admin-nav">
+                <a href="#" class="nav-item active" data-tab="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="products">
+                    <i class="fas fa-box"></i>
+                    <span class="nav-text">Products</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="orders">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav-text">Orders</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="users">
+                    <i class="fas fa-users"></i>
+                    <span class="nav-text">Users</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="categories">
+                    <i class="fas fa-tags"></i>
+                    <span class="nav-text">Categories</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="settings">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-text">Settings</span>
+                </a>
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="admin-content">
+            <div class="admin-header">
+                <div class="admin-title">Dashboard</div>
+                <div class="admin-user">
+                    <img src="user.jpg" alt="Admin">
+                    <span>Admin User</span>
+                </div>
+            </div>
+            
+            <!-- Dashboard Content -->
+            <div class="tab-content active" id="dashboard-tab">
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Sales</div>
+                        <div class="stat-value">120,500,000₫</div>
+                        <div class="stat-change">+12.5% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Orders</div>
+                        <div class="stat-value">48</div>
+                        <div class="stat-change">+8.3% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Users</div>
+                        <div class="stat-value">156</div>
+                        <div class="stat-change">+15.2% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Products</div>
+                        <div class="stat-value">64</div>
+                        <div class="stat-change">+3 new this month</div>
+                    </div>
+                </div>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Recent Orders</div>
+                        <button class="btn btn-primary btn-sm" onclick="showTab('orders')">View All</button>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ORDER123456</td>
+                                <td>Nguyen Van A</td>
+                                <td>16/03/2025</td>
+                                <td>3,600,000₫</td>
+                                <td><span class="status-badge status-processing">Processing</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123455</td>
+                                <td>Tran Thi B</td>
+                                <td>15/03/2025</td>
+                                <td>7,200,000₫</td>
+                                <td><span class="status-badge status-shipped">Shipped</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123454</td>
+                                <td>Le Van C</td>
+                                <td>14/03/2025</td>
+                                <td>4,100,000₫</td>
+                                <td><span class="status-badge status-delivered">Delivered</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123453</td>
+                                <td>Pham Thi D</td>
+                                <td>14/03/2025</td>
+                                <td>3,900,000₫</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Top Selling Products</div>
+                        <button class="btn btn-primary btn-sm" onclick="showTab('products')">View All</button>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Sold</th>
+                                <th>Revenue</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MG 1/100 GUNDAM BARBATOS</td>
+                                <td>3,600,000₫</td>
+                                <td>15</td>
+                                <td>54,000,000₫</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>PG 1/60 GUNDAM DESTINY</td>
+                                <td>4,200,000₫</td>
+                                <td>12</td>
+                                <td>50,400,000₫</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>MG 1/100 GUNDAM KYRIOS</td>
+                                <td>3,600,000₫</td>
+                                <td>10</td>
+                                <td>36,000,000₫</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>RG 1/144 GUNDAM RX-78-3</td>
+                                <td>3,300,000₫</td>
+                                <td>9</td>
+                                <td>29,700,000₫</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Products Tab -->
+            <div class="tab-content" id="products-tab">
+                <div class="d-flex justify-between align-center">
+                    <h2>Product Management</h2>
+                    <button class="btn btn-primary" id="add-product-btn">Add New Product</button>
+                </div>
+                
+                <div class="admin-card" id="product-form" style="display: none;">
+                    <div class="card-header">
+                        <div class="card-title">Add New Product</div>
+                        <button class="btn btn-secondary btn-sm" id="cancel-product">Cancel</button>
+                    </div>
+                    <form class="admin-form">
+                        <div class="form-group">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" class="form-input" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Price (₫)</label>
+                            <input type="number" class="form-input" placeholder="Enter price">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Category</label>
+                            <select class="form-select">
+                                <option>PG</option>
+                                <option>MG</option>
+                                <option>RG</option>
+                                <option>HG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Stock</label>
+                            <input type="number" class="form-input" placeholder="Enter stock quantity">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-textarea" placeholder="Enter product description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Product Image</label>
+                            <input type="file" class="form-input">
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary">Save Product</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Products List</div>
+                        <div>
+                            <input type="text" class="form-input" placeholder="Search products" style="width: 200px;">
+                        </div>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>P001</td>
+                                <td><img src="mohinh1.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>MG 1/100 GUNDAM BARBATOS</td>
+                                <td>MG</td>
+                                <td>3,600,000₫</td>
+                                <td>8</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P002</td>
+                                <td><img src="mohinh2.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>PG 1/60 GUNDAM DESTINY</td>
+                                <td>PG</td>
+                                <td>4,200,000₫</td>
+                                <td>5</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P003</td>
+                                <td><img src="mohinh3.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>MG 1/100 GUNDAM KYRIOS</td>
+                                <td>MG</td>
+                                <td>3,600,000₫</td>
+                                <td>12</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P004</td>
+                                <td><img src="mohinh4.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>RG 1/144 GUNDAM RX-78-3</td>
+                                <td>RG</td>
+                                <td>3,300,000₫</td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P005</td>
+                                <td><img src="mohinh5.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>MG 1/100 GUNDAM SINANJU</td>
+                                <td>MG</td>
+                                <td>4,100,000₫</td>
+                                <td>7</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P006</td>
+                                <td><img src="mohinh6.jpg" alt="Gundam" style="width: 50px; height: 50px;"></td>
+                                <td>HG 1/144 GUNDAM AERIAL X</td>
+                                <td>HG</td>
+                                <td>3,450,000₫</td>
+                                <td>10</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-between align-center mt-20">
+                        <div>Showing 1 to 6 of 12 entries</div>
+                        <div>
+                            <button class="btn btn-secondary btn-sm">Previous</button>
+                            <button class="btn btn-primary btn-sm">1</button>
+                            <button class="btn btn-secondary btn-sm">2</button>
+                            <button class="btn btn-secondary btn-sm">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Orders Tab -->
+            <div class="tab-content" id="orders-tab">
+                <h2>Order Management</h2>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Orders List</div>
+                        <div class="d-flex">
+                            <select class="form-select" style="width: 150px; margin-right: 10px;">
+                                <option>All Status</option>
+                                <option>Pending</option>
+                                <option>Processing</option>
+                                <option>Shipped</option>
+                                <option>Delivered</option>
+                                <option>Cancelled</option>
+                            </select>
+                            <input type="text" class="form-input" placeholder="Search orders" style="width: 200px;">
+                        </div>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ORDER123456</td>
+                                <td>Nguyen Van A</td>
+                                <td>16/03/2025</td>
+                                <td>2</td>
+                                <td>3,600,000₫</td>
+                                <td><span class="status-badge status-processing">Processing</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-success btn-sm">Update</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123455</td>
+                                <td>Tran Thi B</td>
+                                <td>15/03/2025</td>
+                                <td>3</td>
+                                <td>7,200,000₫</td>
+                                <td><span class="status-badge status-shipped">Shipped</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-success btn-sm">Update</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123454</td>
+                                <td>Le Van C</td>
+                                <td>14/03/2025</td>
+                                <td>1</td>
+                                <td>4,100,000₫</td>
+                                <td><span class="status-badge status-delivered">Delivered</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-secondary btn-sm">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123453</td>
+                                <td>Pham Thi D</td>
+                                <td>14/03/2025</td>
+                                <td>1</td>
+                                <td>3,900,000₫</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-success btn-sm">Update</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORDER123452</td>
+                                <td>Hoang Van E</td>
+                                <td>13/03/2025</td>
+                                <td>2</td>
+                                <td>6,800,000₫</td>
+                                <td><span class="status-badge status-cancelled">Cancelled</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-between align-center mt-20">
+                        <div>Showing 1 to 5 of 25 entries</div>
+                        <div>
+                            <button class="btn btn-secondary btn-sm">Previous</button>
+                            <button class="btn btn-primary btn-sm">1</button>
+                            <button class="btn btn-secondary btn-sm">2</button>
+                            <button class="btn btn-secondary btn-sm">3</button>
+                            <button class="btn btn-secondary btn-sm">Next</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Details Modal (normally would be hidden) -->
+                <div class="admin-card" id="order-detail" style="display: none;">
+                    <div class="card-header">
+                        <div class="card-title">Order Details: ORDER123456</div>
+                        <button class="btn btn-secondary btn-sm" id="close-order-detail">Close</button>
+                    </div>
+                    <div class="d-flex justify-between" style="margin-bottom: 20px;">
+                        <div>
+                            <p><strong>Customer:</strong> Nguyen Van A</p>
+                            <p><strong>Email:</strong> nguyenvana@example.com</p>
+                            <p><strong>Phone:</strong> 0912345678</p>
+                        </div>
+                        <div>
+                            <p><strong>Order Date:</strong> 16/03/2025</p>
+                            <p><strong>Status:</strong> <span class="status-badge status-processing">Processing</span></p>
+                            <p><strong>Payment:</strong> COD (Cash on Delivery)</p>
+                        </div>
+                    </div>
+                    <h3>Shipping Address</h3>
+                    <p>Nguyen Van A, 123 Nguyen Hue Street, District 1, Ho Chi Minh City</p>
+                    
+                    <h3>Order Items</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MG 1/100 GUNDAM BARBATOS</td>
+                                <td>3,600,000₫</td>
+                                <td>1</td>
+                                <td>3,600,000₫</td>
+                            </tr>
+                            <tr>
+                                <td>MG 1/100 GUNDAM KYRIOS</td>
+                                <td>3,600,000₫</td>
+                                <td>1</td>
+                                <td>3,600,000₫</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="d-flex justify-between mt-20">
+                        <div>
+                            <h3>Order Updates</h3>
+                            <div style="margin-top: 10px;">
+                                <select class="form-select" style="width: 200px; margin-right: 10px;">
+                                    <option>Processing</option>
+                                    <option>Shipped</option>
+                                    <option>Delivered</option>
+                                    <option>Cancelled</option>
+                                </select>
+                                <button class="btn btn-primary">Update Status</button>
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            <p><strong>Subtotal:</strong> 7,200,000₫</p>
+                            <p><strong>Shipping:</strong> 50,000₫</p>
+                            <p><strong>Total:</strong> <span class="text-primary" style="font-size: 20px; font-weight: bold;">7,250,000₫</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Users Tab -->
+            <div class="tab-content" id="users-tab">
+                <h2>User Management</h2>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Users List</div>
+                        <div>
+                            <input type="text" class="form-input" placeholder="Search users" style="width: 200px;">
+                        </div>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name/Email</th>
+                                <th>Phone</th>
+                                <th>Registered Date</th>
+                                <th>Orders</th>
+                                <th>Spent</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>U001</td>
+                                <td>
+                                    Nguyen Van A<br>
+                                    <small>nguyenvana@example.com</small>
+                                </td>
+                                <td>0912345678</td>
+                                <td>10/01/2025</td>
+                                <td>8</td>
+                                <td>28,500,000₫</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-danger btn-sm">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>U002</td>
+                                <td>
+                                    Tran Thi B<br>
+                                    <small>tranthib@example.com</small>
+                                </td>
+                                <td>0923456789</td>
+                                <td>15/01/2025</td>
+                                <td>5</td>
+                                <td>19,800,000₫</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-danger btn-sm">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>U003</td>
+                                <td>
+                                    Le Van C<br>
+                                    <small>levanc@example.com</small>
+                                </td>
+                                <td>0934567890</td>
+                                <td>22/01/2025</td>
+                                <td>3</td>
+                                <td>12,300,000₫</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-danger btn-sm">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>U004</td>
+                                <td>
+                                    Pham Thi D<br>
+                                    <small>phamthid@example.com</small>
+                                </td>
+                                <td>0945678901</td>
+                                <td>01/02/2025</td>
+                                <td>6</td>
+                                <td>22,700,000₫</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-danger btn-sm">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>U005</td>
+                                <td>
+                                    Hoang Van E<br>
+                                    <small>hoangvane@example.com</small>
+                                </td>
+                                <td>0956789012</td>
+                                <td>15/02/2025</td>
+                                <td>2</td>
+                                <td>7,800,000₫</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">View</button>
+                                    <button class="btn btn-danger btn-sm">Block</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-between align-center mt-20">
+                        <div>Showing 1 to 5 of 156 entries</div>
+                        <div>
+                            <button class="btn btn-secondary btn-sm">Previous</button>
+                            <button class="btn btn-primary btn-sm">1</button>
+                            <button class="btn btn-secondary btn-sm">2</button>
+                            <button class="btn btn-secondary btn-sm">3</button>
+                            <button class="btn btn-secondary btn-sm">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categories Tab -->
+            <div class="tab-content" id="categories-tab">
+                <div class="d-flex justify-between align-center">
+                    <h2>Category Management</h2>
+                    <button class="btn btn-primary" id="add-category-btn">Add New Category</button>
+                </div>
+                
+                <div class="admin-card" id="category-form" style="display: none;">
+                    <div class="card-header">
+                        <div class="card-title">Add New Category</div>
+                        <button class="btn btn-secondary btn-sm" id="cancel-category">Cancel</button>
+                    </div>
+                    <form class="admin-form">
+                        <div class="form-group">
+                            <label class="form-label">Category Name</label>
+                            <input type="text" class="form-input" placeholder="Enter category name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-textarea" placeholder="Enter category description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Parent Category</label>
+                            <select class="form-select">
+                                <option>None</option>
+                                <option>Series</option>
+                                <option>Type</option>
+                                <option>New & Featured</option>
+                                <option>Mega</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Category Image</label>
+                            <input type="file" class="form-input">
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary">Save Category</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="admin-card">
+                    <div class="card-header">
+                        <div class="card-title">Categories List</div>
+                        <div>
+                            <input type="text" class="form-input" placeholder="Search categories" style="width: 200px;">
+                        </div>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Parent</th>
+                                <th>Products</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>C001</td>
+                                <td>New & Featured</td>
+                                <td>None</td>
+                                <td>12</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C002</td>
+                                <td>Series</td>
+                                <td>None</td>
+                                <td>35</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C003</td>
+                                <td>Mega</td>
+                                <td>None</td>
+                                <td>10</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C004</td>
+                                <td>Type</td>
+                                <td>None</td>
+                                <td>64</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C005</td>
+                                <td>PG</td>
+                                <td>Type</td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C006</td>
+                                <td>MG</td>
+                                <td>Type</td>
+                                <td>24</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C007</td>
+                                <td>RG</td>
+                                <td>Type</td>
+                                <td>12</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C008</td>
+                                <td>HG</td>
+                                <td>Type</td>
+                                <td>13</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings-tab">
+                <h2>Store Settings</h2>
+                
+                <div class="admin-card">
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="tab-button active">General</button>
+                            <button class="tab-button">Payment</button>
+                            <button class="tab-button">Shipping</button>
+                            <button class="tab-button">Email</button>
+                        </div>
+                        <div class="tab-content active">
+                            <form class="admin-form">
+                                <div class="form-group">
+                                    <label class="form-label">Store Name</label>
+                                    <input type="text" class="form-input" value="Gundam UP&GO">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Store Email</label>
+                                    <input type="email" class="form-input" value="contact@gundamupgo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Store Phone</label>
+                                    <input type="text" class="form-input" value="0123456789">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Store Address</label>
+                                    <textarea class="form-textarea">Học Viện Bưu Chính Viễn Thông, Hà Nội, Vietnam</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Business Hours</label>
+                                    <input type="text" class="form-input" value="9:00 - 22:00, Monday - Sunday">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Logo</label>
+                                    <div class="d-flex align-center" style="gap: 20px;">
+                                        <img src="logo.png" alt="Store Logo" style="height: 70px;">
+                                        <input type="file" class="form-input">
+                                    </div>
+                                </div>
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-primary">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Payment Tab (Initially Hidden) -->
+                        <div class="tab-content">
+                            <form class="admin-form">
+                                <div class="form-group">
+                                    <label class="form-label">Payment Methods</label>
+                                    <div class="payment-methods">
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="cod" checked>
+                                            <label for="cod">Cash on Delivery (COD)</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="bank-transfer" checked>
+                                            <label for="bank-transfer">Bank Transfer</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="credit-card">
+                                            <label for="credit-card">Credit Card</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="e-wallet">
+                                            <label for="e-wallet">E-Wallet (MoMo, ZaloPay)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Bank Account Details</label>
+                                    <div class="bank-details">
+                                        <div class="form-group">
+                                            <label class="form-label">Bank Name</label>
+                                            <input type="text" class="form-input" value="Vietcombank">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Account Number</label>
+                                            <input type="text" class="form-input" value="1234567890">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Account Holder</label>
+                                            <input type="text" class="form-input" value="GUNDAM UP&GO">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Branch</label>
+                                            <input type="text" class="form-input" value="Ha Noi">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-primary">Save Payment Settings</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Shipping Tab (Initially Hidden) -->
+                        <div class="tab-content">
+                            <form class="admin-form">
+                                <div class="form-group">
+                                    <label class="form-label">Shipping Methods</label>
+                                    <div class="shipping-methods">
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="standard" checked>
+                                            <label for="standard">Standard Shipping</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="express" checked>
+                                            <label for="express">Express Shipping</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="store-pickup">
+                                            <label for="store-pickup">Store Pickup</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Shipping Rates</label>
+                                    <table class="admin-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Shipping Method</th>
+                                                <th>Cost</th>
+                                                <th>Estimated Delivery</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Standard Shipping</td>
+                                                <td><input type="text" class="form-input" value="50,000₫"></td>
+                                                <td><input type="text" class="form-input" value="3-5 business days"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Express Shipping</td>
+                                                <td><input type="text" class="form-input" value="100,000₫"></td>
+                                                <td><input type="text" class="form-input" value="1-2 business days"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Store Pickup</td>
+                                                <td><input type="text" class="form-input" value="Free"></td>
+                                                <td><input type="text" class="form-input" value="Same day"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-primary">Save Shipping Settings</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Email Tab (Initially Hidden) -->
+                        <div class="tab-content">
+                            <form class="admin-form">
+                                <div class="form-group">
+                                    <label class="form-label">Email Notifications</label>
+                                    <div class="email-notifications">
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="new-order" checked>
+                                            <label for="new-order">New Order</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="order-status" checked>
+                                            <label for="order-status">Order Status Update</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="new-user" checked>
+                                            <label for="new-user">New User Registration</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="low-stock">
+                                            <label for="low-stock">Low Stock Alert</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">SMTP Configuration</label>
+                                    <div class="smtp-config">
+                                        <div class="form-group">
+                                            <label class="form-label">SMTP Host</label>
+                                            <input type="text" class="form-input" value="smtp.gmail.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">SMTP Port</label>
+                                            <input type="text" class="form-input" value="587">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-input" value="notification@gundamupgo.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Password</label>
+                                            <input type="password" class="form-input" value="********">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-primary">Save Email Settings</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
+                            

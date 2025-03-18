@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Gundam UP&GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="main.js"></script>
+    <script src="lo&re.js"></script>
+    <script src="account.js"></script>
+    <style>
+        html,body{
+            margin:0px;
+            height:100%;
+            overflow: hidden;
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+<div class ="header">
+    <div class ="title t1"><a href="#">New & Featured</a></div>
+    <div class ="title t2"><a href="#">SERIES</a></div>
+    <div class ="title t3"><a href="#">MEGA</a></div>
+    <div class ="title t4"><a href="#">TYPE</a></div>
+    <div class="imglogo-home"><a href="index.html"><img src="logo.png" alt="anhlogoanhlogo"></a></div>
+    <div class="search-container">
+        <input type="text" placeholder="search">
+        <button><img src="search-regular-24.png" alt=""></button>
+    </div>
+    <div class="login si"><a href="login.html">Sign in /</a></div>
+    <div class="login re"><a href="register.html">Register</a></div>
+    <div id="user-account" style="display: none;">
+        <a href="account.html">
+            <img src="user.jpg" alt="User Icon">
+            <span>My Account</span>
+        </a>
+    </div>
+    <div class="support"><a href="#"><img src="image2.png" alt="logo-phone"></a></div>
+    <div class="address-store"><a href="#"><img src="image3.png" alt="logo-address-store"></a></div>
+    <div class="cart-icon">
+      <a href="cart.html">
+          <img src="cart.png" alt="Giỏ hàng">
+          <span id="cart-count">0</span>
+      </a>
+  </div>
+</div>
+<div class="Register-wrapper"> 
+    <div class="auth-box">
+        <h2>Register</h2>
+        <div class="form-group">
+            <input type="email" id="reg-email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="text" id="reg-phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <input type="password" id="reg-password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input type="password" id="reg-confirm-password" placeholder="Confirm Password">
+        </div>
+        <button class="btn-submit" id="register-btn">CONTINUE</button>
+        <p class="switch-auth">Already have an account? <a href="login.html">Sign in</a>.</p>
+        <p id="register-error" style="color: red;"></p>
+    </div>
+</div>
+</body>
+</html>
